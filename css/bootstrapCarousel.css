@@ -1,0 +1,216 @@
+@charset "utf-8";
+/* CSS Document */
+
+.carousel {
+    position: relative;
+	background-size:cover;
+	overflow:hidden;
+	
+}
+
+.overlay{
+	position: absolute;
+width: 100%;
+height: 100%;
+background:rgba(0, 0, 0, 0.11);
+top: 0px;
+left: 0px;
+}
+
+.carousel-indicators {
+	bottom: 0;
+}
+.carousel-control.right,
+.carousel-control.left {
+	background-image: none;
+}
+.carousel .item {
+	min-height: 450px;
+padding-top: 30px;
+	height: 100%;
+	width:100%; 
+}
+
+
+#text_slide{
+	padding-top:80px;
+	text-align:center;
+	color:#FFF;
+	padding-bottom:0%;
+}
+
+
+
+/* Animation Settings  
+   ================================================== */
+
+.item .animation {
+    visibility: hidden;
+}
+
+.onload-class .item-theme-first.active .animation {
+    visibility: visible;
+
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+.item-theme.active .animation {
+    visibility: visible;
+
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+}
+
+
+  /*Animation*/
+  
+ 
+  
+  #carouselHacked .active .animation.animated-item-1 {
+  -webkit-animation:fadeInUp 1s linear 1s both;
+  -moz-animation: fadeInUp 1s linear 1s both;
+  -o-animation: fadeInUp 1s linear 1s both;
+  -ms-animation: fadeInUp 1s linear 1s both;
+  animation: fadeInUp 1s linear 1s both;
+
+}
+
+#carouselHacked .active .animation.animated-item-2 {
+  -webkit-animation: fadeInLeft 1s linear  1s both;
+  -moz-animation: fadeInLeft 1s linear  1s both;
+  -o-animation: fadeInLeft 1s linear  1s both;
+  -ms-animation: fadeInLeft 1s linear  1s both;
+  animation: fadeInLeft 1s linear 1s both;
+  
+}
+
+#carouselHacked .active .animation.animated-item-3{
+   -webkit-animation: fadeInUp 1s linear 1s  both;
+  -moz-animation: fadeInUp 1s linear 1s  both;
+  -o-animation: fadeInUp 1s linear 1s  both;
+  -ms-animation: fadeInUp 1s linear 1s  both;
+  animation: fadeInUp 1s linear 1s  both;
+}
+
+
+ #carouselHacked .active .animation.animated-item-4{
+  -webkit-animation: fadeInRight 1s linear 1s  both;
+  -moz-animation: fadeInRight 1s linear 1s  both;
+  -o-animation: fadeInRight 1s linear 1s  both;
+  -ms-animation: fadeInRight 1s linear 1s  both;
+  animation: fadeInRight 1s linear 1s  both;
+}
+
+ #carouselHacked .active .animation.animated-item-5{
+  -webkit-animation: fadeInLeft 1s linear 1s  both;
+  -moz-animation: fadeInLeft 1s linear 1s  both;
+  -o-animation: fadeInLeft 1s linear 1s  both;
+  -ms-animation: fadeInLeft 1s linear 1s  both;
+  animation: fadeInLeft 1s linear 1s  both;
+}
+ 
+
+#carouselHacked .active .animation.animated-item-6{
+  -webkit-animation: fadeInDown 1s linear 1s   both;
+  -moz-animation: fadeInDown 1s linear 1s   both;
+  -o-animation: fadeInDown 1s linear 1s   both;
+  -ms-animation: fadeInDown 1s linear 1s   both;
+  animation: fadeInDown 1s linear 1s  both;
+}
+
+
+
+
+
+.carousel-indicators .active {
+	background:#008b8b;
+	border:none;
+}
+
+
+
+
+
+/*Arrow animation on hover*/
+
+
+.carousel-left, 
+.carousel-right{
+	position: absolute;
+	top: 45%;
+    width: 50px;
+    height: 50px;
+    margin-top: -25px;
+    line-height: 47px;
+    font-size: 32px;
+	text-align: center;
+	color:#008b8b;
+	z-index: 999;
+	-webkit-transition: 300ms;
+	-moz-transition: 300ms;
+	-o-transition: 300ms;
+	-ms-transition: 300ms;
+	transition: 300ms;
+  background: #FFF;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+
+}
+.carousel-right i{
+    padding-left: 5px;
+  transform: rotate(-45deg);
+}
+.carousel-left i{
+    padding-left: -5px;
+   transform: rotate(-45deg);
+}
+
+.carousel-left {
+	left:-200px;
+  border: 1px solid #FFF;
+}
+
+.carousel-right {
+	right:-200px;
+	border: 1px solid #FFF;
+}
+
+.carousel-left:hover, .carousel-right:hover,.carousel-left:focus,.carousel-right:focus {
+	background-color:#008b8b;
+	color:#FFF;
+  border: 1px solid #008b8b;
+}
+
+#carouselHacked:hover .carousel-left {
+	left:20px;
+}
+
+#carouselHacked:hover .carousel-right {
+	right:20px;
+}	
+
+
+
+@media all and (transform-3d), (-webkit-transform-3d) {
+    .carousel-fade .carousel-inner > .item.next,
+    .carousel-fade .carousel-inner > .item.active.right {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.prev,
+    .carousel-fade .carousel-inner > .item.active.left {
+      opacity: 0;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+    .carousel-fade .carousel-inner > .item.next.left,
+    .carousel-fade .carousel-inner > .item.prev.right,
+    .carousel-fade .carousel-inner > .item.active {
+      opacity: 1;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+    }
+}
+
